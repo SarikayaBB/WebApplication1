@@ -1,0 +1,25 @@
+﻿@model Category
+
+
+<div class="container">
+    <form method="post">
+        <div class="mb-3 row">
+            <label asp-for="CategoryName" class="col-4 col-form-label">Category Name</label>
+            <div class="col-8">
+                <input type="text" class="form-control"  asp-for="CategoryName" placeholder="@Model.CategoryName">
+                @*<input type="text" class="" style=" display:none" asp-for="CategoryId" />*@
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Description" class="col-4 col-form-label">Category Description</label>
+            <div class="col-8">
+                <input type="text" class="form-control" asp-for="Description" placeholder="@Model.Description">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <div class="offset-sm-4 col-sm-8">
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
