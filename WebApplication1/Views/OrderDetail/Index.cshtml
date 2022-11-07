@@ -14,6 +14,7 @@
             <th>Quantity</th>
             <th>Discount</th>
             <th>Extended Price</th>
+            <th>Operations</th>
         </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -34,6 +35,18 @@
                 { data: 'discount' },
                 { data: 'extendedPrice' }
             ],
+            columnDefs: [{
+                "data": 'orderId',
+                "targets": [7],
+                "render": function (data, type, full) {
+                    return ' <button id="' + data + '" class="btn btn-danger" >Delete</button>';
+                },
+                /*  "data": 'orderId',
+                "targets": [6],
+                "render": function (data, type, full) {
+                    return '<button class="btn btn-danger" id="' + data + '">Delete</button>'
+                }*/
+            }],
         });
     });
 </script>
